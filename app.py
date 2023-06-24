@@ -1,7 +1,7 @@
 from transformers import pipeline
 import gradio as gr
 
-p = pipeline("automatic-speech-recognition", model="openai/whisper-medium")
+p = pipeline("automatic-speech-recognition", model="openai/whisper-base")
 # p = pipeline("automatic-speech-recognition", model="facebook/wav2vec2-base-960h")
 
 
