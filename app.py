@@ -1,7 +1,7 @@
 from transformers import pipeline
 import gradio as gr
 
-p = pipeline("automatic-speech-recognition", model="openai/whisper-tiny")
+p = pipeline("automatic-speech-recognition", model="openai/whisper-medium")
 # p = pipeline("automatic-speech-recognition", model="facebook/wav2vec2-base-960h")
 
 
@@ -23,4 +23,4 @@ gr.Interface(
         "textbox",
         "state"
     ],
-    live=True).launch()
+    live=True).launch(share=True)
