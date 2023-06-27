@@ -23,4 +23,4 @@ gr.Interface(
         "textbox",
         "state"
     ],
-    live=True).launch(share=True)
+    live=True).launch(debug=True)

@@ -76,3 +76,4 @@ urllib3==2.0.3
 uvicorn==0.22.0
 websockets==11.0.3
 yarl==1.9.2
+vosk~=0.3.45

@@ -5,6 +5,7 @@ from vosk import KaldiRecognizer, Model
 
 model = Model(lang="en-us")
 
+
 def transcribe(data, state):
     sample_rate, audio_data = data
     audio_data = (audio_data >> 16).astype("int16").tobytes()
@@ -25,6 +26,7 @@ def transcribe(data, state):
 
     return "\n".join(result) + "\n" + partial_result, (rec, result)
 
+
 gr.Interface(
     fn=transcribe,
     inputs=[
@@ -35,4 +37,4 @@ gr.Interface(
         "textbox",
         "state"
     ],
-    live=True).launch(share=True)
+    live=True).launch(share=False)
